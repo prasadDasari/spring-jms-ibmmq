@@ -26,3 +26,25 @@ which serves as both message consumer and producer, which is the MQGateway.java
 
 Git hub : https://github.com/cpiotr/blog/tree/master/blog-code/src/main/java/pl/ciruk/blog/mq
 # spring-jms-ibmmq
+
+Requirements:
+IBMMQ docker is running 
+
+
+#For complete build
+mvn clean install 
+
+#To ignore Test
+#mvn clean install -Dmaven.test.skip=true
+
+#To run the application
+mvn spring-boot:run
+
+# To use random instead of default port 8080 for spring boot application,use below property in 'application.properties'
+server.port=0
+
+
+#SwaggerLink
+http://localhost:8080/swagger-ui.html#!/web-controller/Spring_Integration_with_IBM_MQ
+
+Note: port : 8080 might differ in above link , if you want to use random port to run your spring-boot application.
